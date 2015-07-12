@@ -25,46 +25,46 @@ Config File Format:
 The configuration file is split into sections. One section defines one column of
 the output LaTeX tabular. A section is started with a title in square brackets:
 
-	[Column1]
+    [Column1]
 
 The title can be followed by configuration items. Each item starts on a new line
 and is separated from its value by either a colon (:) or an equals sign (=).
 Strings must not be quoted. For strings, LaTeX syntax is supported.
 
-	title: <string>
-		Set <string> as the column header for this column. This is optional. By
-		default, the colum header is the section title.
+    title: <string>
+        Set <string> as the column header for this column. This is optional. By
+        default, the colum header is the section title.
 
-	column: <integer>
-		Data for this section is read from this column of the data file. This
-		option must be specified, there is no default value.
+    column: <integer>
+        Data for this section is read from this column of the data file. This
+        option must be specified, there is no default value.
 
-	error: <integer>
-		Errors for this section are read from this column of the data file.
-		Optional. Each entry is then printed as $%1.<p>f \pm %1.<p>f$ where <p>
-		is either the specified precision (Decimal places, use negative values
-		to round to tens, hundreds, etc. Equal for the whole section) or the
-		most significant digit of the error (on a line-to-line basis) if no
-		precisions is specified.
+    error: <integer>
+        Errors for this section are read from this column of the data file.
+        Optional. Each entry is then printed as $%1.<p>f \pm %1.<p>f$ where <p>
+        is either the specified precision (Decimal places, use negative values
+        to round to tens, hundreds, etc. Equal for the whole section) or the
+        most significant digit of the error (on a line-to-line basis) if no
+        precisions is specified.
 
-	precision: <integer>
-		Number of decimal places to round each value to. Can be negative to
-		round to tens, hundreds, etc. Optional. If no error is available for
-		this section, this defaults to 0 (rounding to nearest integer). If
-		errors are available and precision is unspecified, round to most
-		significant digit of the error.
+    precision: <integer>
+        Number of decimal places to round each value to. Can be negative to
+        round to tens, hundreds, etc. Optional. If no error is available for
+        this section, this defaults to 0 (rounding to nearest integer). If
+        errors are available and precision is unspecified, round to most
+        significant digit of the error.
 
-	scale: <float>
-		Multiply each data point by this value. Optional.
+    scale: <float>
+        Multiply each data point by this value. Optional.
 
-	error_scale: <float>
-		Multiply each error by this value. Optional. Defaults to scale if scale
-		is specified.
+    error_scale: <float>
+        Multiply each error by this value. Optional. Defaults to scale if scale
+        is specified.
 
-	alignment: <string>
-		Alignment character to use in tabular definition. Optional. Defaults to
-		c. While vertical lines (|) are supported, they are highly discouraged.
-		Read the booktabs documentation on an explanation why.
+    alignment: <string>
+        Alignment character to use in tabular definition. Optional. Defaults to
+        c. While vertical lines (|) are supported, they are highly discouraged.
+        Read the booktabs documentation on an explanation why.
 
 Example configuration file:
 
