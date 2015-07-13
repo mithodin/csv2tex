@@ -15,7 +15,7 @@ Usage: csv2tex [OPTIONS]
 
   -o file, --out=file
     write table to file
-    default: out.tex
+    default: write to stdout
 
   -c file, --conf=file
     read configuration from file
